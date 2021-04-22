@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -320,6 +321,76 @@ hr {
 ::-webkit-scrollbar-button:end:active {
   background: url(../images/scrollbar_arrow.png) no-repeat -30px -18px; }
 
+.kg-bookmark-card {
+  width: 100%;
+  position: relative; }
+  .kg-bookmark-card .kg-bookmark-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    color: currentColor;
+    font-family: inherit;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.1); }
+  .kg-bookmark-card .kg-bookmark-container:hover {
+    text-decoration: none; }
+  .kg-bookmark-card .kg-bookmark-content {
+    width: 0px;
+    flex-basis: 0;
+    flex-grow: 999;
+    padding: 20px;
+    order: 1; }
+  .kg-bookmark-card .kg-bookmark-title {
+    font-weight: 600; }
+  .kg-bookmark-card .kg-bookmark-metadata,
+  .kg-bookmark-card .kg-bookmark-description {
+    margin-top: .5em; }
+  .kg-bookmark-card .kg-bookmark-metadata {
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .kg-bookmark-card .kg-bookmark-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden; }
+  .kg-bookmark-card .kg-bookmark-icon {
+    box-shadow: none;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: text-bottom;
+    margin-right: .5em;
+    margin-bottom: .05em; }
+  .kg-bookmark-card .kg-bookmark-thumbnail {
+    max-width: 180px;
+    min-width: 140px;
+    display: flex;
+    flex-basis: 24rem;
+    flex-grow: 1; }
+  .kg-bookmark-card .kg-bookmark-thumbnail img {
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+    height: auto;
+    vertical-align: bottom;
+    object-fit: cover; }
+  .kg-bookmark-card .kg-bookmark-author {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .kg-bookmark-card .kg-bookmark-publisher::before {
+    content: "•";
+    margin: 0 .5em; }
+
+.prev_post {
+  font-size: 12px; }
+
+.next_post {
+  font-size: 12px;
+  float: right; }
+
 .post-comments {
   border-top: 1px solid #DDDDDD;
   padding: 60px 0; }
@@ -348,6 +419,7 @@ hr {
 .post img {
   box-shadow: 0 3px 15px 3px rgba(51, 51, 51, 0.5);
   max-width: 100%;
+  height: auto;
   margin: 20px auto 20px auto;
   border-radius: 3px;
   text-align: center;
