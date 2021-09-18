@@ -5,10 +5,19 @@
     <ol class="post-list">
       {{#foreach posts}}
       <li>
-        <h2 class="post-list__post-title post-title"><a href="{{url}}" title="link to {{{title}}}">{{{title}}}</a></h2>
-        <p class="excerpt">{{excerpt characters="250"}}&hellip;</p>
-        <div class="post-list__meta"><time datetime="{{date format="YYYY MMM DD"}}" class="post-list__meta--date date">{{date format="YYYY MMM DD"}}</time> &#8226; <span class="post-list__meta--tags tags">{{tags}}</span><a class="btn-border-small" href={{url}}>继续阅读</a></div>
-        <hr class="post-list__divider" />
+        <table class="imgtable" cellspacing="0" cellpadding="0" border="0">
+          {{#if feature_image}}
+            <td border="0" align="middle" width=310px>
+              <img src="{{img_url feature_image}}" width=300px>
+            </td>
+          {{/if}}
+          <td border="0" align="middle">
+            <h2 class="post-list__post-title post-title"><a href="{{url}}" title="link to {{{title}}}">{{{title}}}</a></h2>
+            <p class="excerpt">{{excerpt characters="250"}}&hellip;</p>
+            <div class="post-list__meta"><time datetime="{{date format="YYYY MMM DD"}}" class="post-list__meta--date date">{{date format="YYYY MMM DD"}}</time> &#8226; <span class="post-list__meta--tags tags">{{tags}}</span><a class="btn-border-small" href={{url}}>继续阅读</a></div>
+            <hr class="post-list__divider" />
+          </td>
+        </table>
       </li>
       {{/foreach}}
     </ol>
@@ -16,3 +25,5 @@
     {{pagination}}
 
   </div>
+
+<link rel="stylesheet" href="{{asset "css/index.css"}}" />
