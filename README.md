@@ -1,8 +1,10 @@
-# Vno, just another ghost theme
+# Lno, just another ghost theme
 
 ## 总览
 
 `Vno` 是一个从 [Dale Anthony 的 Uno](https://github.com/daleanthony/uno) 派生出的 Ghost 主题。它遵从简洁和响应式的设计风格，拥有一个独立的封面，字体图标以及多种颜色。
+
+`Mno`基于`Vno`，而`Lno`基于`Mno`，这样的选择是因为我个人觉得首先`Vno`的版面很适合书写，没有那么多花里胡哨且很美观。而`Mno`让`Vno`更加易用与时尚，于是进行了个性化改造。
 
 ## 特性
 
@@ -86,9 +88,6 @@ Vno 是基于 SASS 创建的，但是如果您不再希望继续维护可扩展�
 }
 </script>
 ```
-
-#### MathJax
-主题内部集成了MathJax，您只需要在发布文章时，增加一个 "MathJax" 标签，即可让该文章支持 LaTeX 语法。
 
 #### 导航按钮
 
