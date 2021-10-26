@@ -41,7 +41,7 @@ figure.kg-width-full img {
 }
 
 .post-full-content pre {
-    max-width: 0;
+    max-width: 50em;
 }
 .post-content h2,
 .post-content h3 {
